@@ -160,7 +160,7 @@ padding: 3px 10px 2px;
 
 @media (max-width: 768px){
   .colsm12{
-    width: 100% !important;
+    width: 98% !important;
   }
 }
 @media (min-width: 769px) and (max-width: 1399px) {
