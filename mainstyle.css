@@ -168,9 +168,19 @@ padding: 3px 10px 2px;
     width: 31% !important;
   }
 }
+
+@media (min-width: 1399px){
+  .blogcard{
+    width:1%;
+  }
+}
+
 @media (min-width: 1400px) {
   .col4{
     width: 32% !important;
+  }
+  .blogcard{
+    width:18rem;
   }
 }
 
@@ -222,4 +232,14 @@ padding: 3px 10px 2px;
 
 .social-icons .social-icon:hover {
   color: #ffc107;
+}
+
+.custom{
+  width: 50%;
+  margin-top: 20px;
+}
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
 }
