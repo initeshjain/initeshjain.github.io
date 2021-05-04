@@ -227,6 +227,15 @@ padding: 3px 10px 2px;
   .custom{
     width: 90% !important;
   }
+  .titlefont{
+    font-size: 3vh;
+  }
+  .descfont{
+    font-size: 2.5vh;
+  }
+  .timefont{
+    font-size: 1.5vh !important;
+  }
 }
 
 .social-icons .social-icon {
@@ -258,4 +267,3 @@ padding: 3px 10px 2px;
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
 }
-
