@@ -236,14 +236,20 @@ padding: 3px 10px 2px;
   .timefont{
     font-size: 1.5vh !important;
   }
+  .social-icons .social-icon{
+    margin: 0;
+    padding: 0;
+    width: 25px !important;
+    height: 25px !important;
+  }
 }
 
 .social-icons .social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 1rem;
-  width: 1rem;
+  max-height: 1rem;
+  max-width: 1rem;
   color: #000000;
   border-radius: 100%;
   font-size: 1.5rem;
