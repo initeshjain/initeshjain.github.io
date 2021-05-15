@@ -273,3 +273,17 @@ padding: 3px 10px 2px;
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
 }
+
+.bodydark{
+  background-color: #1d1d1d;
+}
+
+.cardblack{
+  background-color: #000000;
+}
+.cardtext{
+  color: white !important;
+}
+.icon-color{
+  color:#09f !important;
+}
