@@ -275,11 +275,11 @@ padding: 3px 10px 2px;
 }
 
 .bodydark{
-  background-color: #1d1d1d;
+  background-color: rgb(31, 30, 30);
 }
 
 .cardblack{
-  background-color: #000000;
+  background-color: #272525;
 }
 .cardtext{
   color: white !important;
