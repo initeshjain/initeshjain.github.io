@@ -28,7 +28,6 @@ body{margin-top:20px;}
 
 .projects{
   margin-left: 1% !important;
-  font-size: 32px !important;
 }
 
 .img-fluid{
@@ -281,9 +280,17 @@ padding: 3px 10px 2px;
 .cardblack{
   background-color: #272525;
 }
-.cardtext{
+/**.cardtext, li{
   color: white !important;
-}
+}**/
 .icon-color{
   color:#09f !important;
 }
+.content-heading{
+  color: #FFC207 !important;
+}
+
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
