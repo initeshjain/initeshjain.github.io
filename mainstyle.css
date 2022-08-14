@@ -1,4 +1,8 @@
-body{margin-top:20px;}
+body{
+  margin-top:20px;
+  background-color: #eef7ff;
+}
+
 .section {
     padding: 100px 0;
     position: relative;
