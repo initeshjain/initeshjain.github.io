@@ -8,7 +8,7 @@ import Publications from './components/Publications';
 import Certifications from './components/Certifications';
 import Footer from './components/Footer';
 import Services from "./components/Services";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from './components/Header';
 
 function Home() {
