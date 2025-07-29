@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+@import "tailwindcss";
 @tailwind utilities;
 
 /* Declare custom design tokens */
@@ -9,6 +9,14 @@
   --font-inclusive: "Inclusive Sans", sans-serif;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 @layer base {
   body {
@@ -20,32 +28,32 @@
   .resume-box {
     @apply bg-white shadow-lg rounded-lg;
   }
-  
+
   .timeline-item {
     @apply relative pl-16 pb-8;
   }
-  
+
   .timeline-item::after {
     content: "";
     @apply absolute left-5 top-0 w-px h-full border-l border-dashed border-warning;
   }
-  
+
   .timeline-item:last-child::after {
     @apply hidden;
   }
-  
+
   .timeline-icon {
     @apply absolute left-0 w-10 h-10 bg-white border border-dashed border-warning rounded-full flex items-center justify-center text-warning z-10;
   }
-  
+
   .progress-bar {
     @apply bg-warning text-black font-bold text-sm flex items-center justify-center;
   }
-  
+
   .social-icon {
     @apply inline-flex items-center justify-center w-12 h-12 text-black border border-black rounded-full text-xl mr-6 hover:text-warning transition-colors;
   }
-  
+
   .social-icon:last-child {
     @apply mr-0;
   }
