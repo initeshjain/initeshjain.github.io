@@ -1,0 +1,33 @@
+import React from 'react';
+import Alert from './components/Alert';
+import Hero from './components/Hero';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import Publications from './components/Publications';
+import Certifications from './components/Certifications';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div className="min-h-screen bg-cream px-4 sm:px-8 md:px-16">
+      <main className="py-5">
+        <div className="container mx-auto px-4 mb-8">
+          <Alert />
+        </div>
+
+        <Hero />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Education />
+        <Publications />
+        <Certifications />
+        <Footer />
+      </main>
+    </div>
+  );
+}
+
+export default App;
