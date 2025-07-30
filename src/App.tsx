@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Services from "./components/Services";
 import { Routes, Route } from "react-router-dom";
 import Header from './components/Header';
+import Blogs from './components/Blogs';
 
 function Home() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/blogs" element={<Blogs />} />
         </Routes>
 
         <Footer />

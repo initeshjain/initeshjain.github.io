@@ -15,6 +15,9 @@ export default function Header() {
                     <NavLink to="/services" className={linkClass}>
                         Services
                     </NavLink>
+                    <NavLink to="/blogs" className={linkClass}>
+                        Blogs
+                    </NavLink>
                 </div>
             </nav>
         </header>
