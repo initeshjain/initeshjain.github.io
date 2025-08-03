@@ -71,11 +71,11 @@ export default function Services() {
                                 </div>
                                 <div className="min-w-0">
                                     <div className="text-xs uppercase tracking-wide text-gray-500">{item.category}</div>
-                                    <h3 className="truncate text-lg font-semibold">{item.title}</h3>
+                                    <h3 className="truncate text-lg font-semibold" title={item.title}>{item.title}</h3>
                                 </div>
                             </div>
 
-                            <p className="mt-1 line-clamp-3 text-sm text-gray-700">{item.description}</p>
+                            <p className="mt-1 line-clamp-3 text-sm text-gray-700" title={item.description}>{item.description}</p>
 
                             <div className="mt-3 flex flex-wrap gap-2">
                                 {(item.tags ?? []).map(tag => (

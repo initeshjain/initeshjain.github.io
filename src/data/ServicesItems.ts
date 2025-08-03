@@ -36,8 +36,8 @@ export const items: Item[] = [
     // },
     {
         id: "prod-admin-template",
-        title: "React Admin Shell (Vite + Tailwind)",
-        description: "Auth shell, protected routes, layout, dark mode.",
+        title: "React Admin Panel (Vite + Tailwind)",
+        description: "Authentication, protected routes, layout, dark mode.",
         category: "Products",
         tags: ["React", "Tailwind"],
         price: "₹999",
@@ -132,6 +132,14 @@ export const items: Item[] = [
         tags: ["Next.js", "Tailwind", "Fullstack"],
         price: "Coming Soon",
         link: "#"
+    },
+    {
+        id: "resume-review",
+        title: "Resume Review",
+        description: "Get Your Resume Reviewed To Get Job You Want.",
+        category: "Services",
+        tags: ["Job", "Resume", "Career"],
+        price: "₹99",
+        link: "mailto:nitesh.exe@gmail.com?subject=Resume%20Review%20Request&body=Hi%20Nitesh%2C%0A%0AI%20would%20like%20to%20get%20my%20resume%20reviewed.%20Here%20are%20some%20details%3A%0A%0A-%20My%20current%20role%3A%20%0A-%20Years%20of%20experience%3A%20%0A-%20Target%20roles%3A%20%0A%0AThanks%2C%0A%5BYour%20Name%5D"
     }
-
 ];
