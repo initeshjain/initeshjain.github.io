@@ -18,6 +18,15 @@ export type Item = {
 
 export const items: Item[] = [
     {
+        id: "rag-custom-pipeline",
+        title: "RAG Custom Pipeline Implementation",
+        description: "Custom Retrieval-Augmented Generation (RAG) pipelines with vector DBs, embeddings, and API integration.",
+        category: "Gigs",
+        tags: ["LLM", "RAG", "AI", "Embeddings", "LangChain"],
+        price: "Custom",
+        link: "mailto:nitesh.exe@gmail.com?subject=Request%20for%20RAG%20Pipeline%20Implementation&body=Hi%20Nitesh%2C%0A%0AI%20am%20interested%20in%20your%20RAG%20pipeline%20implementation%20gig.%20Could%20you%20please%20share%20details%20about%20the%20architecture%2C%20tech%20stack%20used%2C%20and%20pricing%20for%20a%20custom%20solution%20involving%20vector%20database%2C%20embeddings%2C%20document%20loaders%2C%20and%20API%20integration%3F%0A%0AThanks%2C%0A%5BYour%20Name%5D"
+    },
+    {
         id: "svc-ci-cd",
         title: "End-to-end CI/CD setup (GitHub Actions/TeamCity)",
         description: "Pipelines with caching, test gates, and multi-env promotion.",
