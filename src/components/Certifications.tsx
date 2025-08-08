@@ -28,97 +28,43 @@ const Certifications: React.FC = () => {
       url: "https://www.coursera.org/verify/RJLJEB65AJG2"
     },
     {
-      title: "Using Python to Access Web Data",
-      icon: "fab fa-python",
-      url: "https://www.coursera.org/verify/6VPSBTE9FQAM"
-    },
-    {
-      title: "What is Data Science?",
-      icon: "far fa-chart-bar",
-      url: "https://www.coursera.org/verify/ZLZPWQ94YNF9"
-    },
-    {
-      title: "AWS Fundamentals: Addressing Security Risk",
-      icon: "fab fa-aws",
-      url: "https://www.coursera.org/verify/7JVS35TCP44B"
-    },
-    {
       title: "Computer Vision - Object Detection with OpenCV and Python",
       icon: "fas fa-desktop",
       url: "https://www.coursera.org/verify/TEJ334BZJ5S6"
     },
     {
-      title: "Programming for Everybody (Getting Started with Python)",
-      icon: "fas fa-terminal",
-      url: "https://www.coursera.org/verify/T4ZUS6R7AEXS"
-    },
-    {
-      title: "Crash Course on Python",
-      icon: "fab fa-python",
-      url: "https://www.coursera.org/verify/5MX5VG2W7UMV"
-    },
-    {
-      title: "Introduction to Data Science in Python",
-      icon: "fas fa-database",
-      url: "https://www.coursera.org/verify/TKUMLQJ3BPQJ"
-    },
-    {
-      title: "Python for Data Science and AI",
-      icon: "fas fa-robot",
-      url: "https://www.coursera.org/verify/MDF9MDYVPM4D"
-    },
-    {
-      title: "HTML, CSS, and Javascript for Web Developers",
-      icon: "fab fa-html5",
-      url: "https://www.coursera.org/verify/VQCYNNJW6YRJ"
-    },
-    {
       title: "Data Management in the Cloud",
       icon: "fas fa-cloud",
       url: "https://www.coursera.org/verify/NBSXWFMXXKSZ"
-    },
-    {
-      title: "AWS Fundamentals: Building Serverless Applications",
-      icon: "fab fa-aws",
-      url: "https://www.coursera.org/verify/ULSAFJRS2KWS"
-    },
-    {
-      title: "AWS Fundamentals: Going Cloud-Native",
-      icon: "fab fa-aws",
-      url: "https://www.coursera.org/verify/Z8F7EDVWGT28"
     }
   ];
 
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-normal mb-8 ml-4">
-            <i className="fas fa-certificate mr-3"></i>
-            Certificates
-          </h2>
-          <div className="resume-box p-8 mx-4">
-            <ul className="space-y-4">
-              {certifications.map((cert, index) => (
-                <li key={index} className="flex items-center justify-between py-2 border-b border-gray-200 last:border-b-0">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 flex items-center justify-center mr-4">
-                      <i className={`${cert.icon} text-warning`}></i>
-                    </div>
-                    <span className="text-gray-800">{cert.title}</span>
-                  </div>
-                  <a
-                    href={cert.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-warning hover:text-yellow-600 transition-colors"
-                  >
-                    <i className="fa fa-external-link-alt"></i>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <h2 className="text-3xl font-semibold mb-10 flex items-center">
+          <i className="fas fa-certificate text-warning mr-3"></i>
+          Certifications
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {certifications.map((cert, index) => (
+            <a
+              key={index}
+              href={cert.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white shadow-md rounded-lg p-5 flex items-start space-x-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-yellow-100 rounded-full">
+                <i className={`${cert.icon} text-warning text-lg`}></i>
+              </div>
+              <div>
+                <h3 className="text-gray-800 font-medium">{cert.title}</h3>
+                <p className="text-sm text-gray-500 mt-1">Click to view</p>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>
