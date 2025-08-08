@@ -1,4 +1,4 @@
-oconst blogs = [
+const blogs = [
     {
         title:
             "Instead of blaming the system, let’s push for real change — industry awareness, hackathons & practical learning.",
