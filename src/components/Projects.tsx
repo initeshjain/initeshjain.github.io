@@ -9,7 +9,7 @@ import {
   FaWallet,
   FaBrain,
 } from "react-icons/fa";
-import { SiMongodb, SiNextdotjs, SiPrisma, SiTailwindcss, SiTypescript, SiLangchain, SiPython, SiDocker, SiGo } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
 
 const Projects: React.FC = () => {
   const projects = [

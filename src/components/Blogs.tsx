@@ -1,6 +1,4 @@
-import React from "react";
-
-const blogs = [
+oconst blogs = [
     {
         title:
             "Instead of blaming the system, let’s push for real change — industry awareness, hackathons & practical learning.",

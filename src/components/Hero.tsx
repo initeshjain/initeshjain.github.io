@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGithub, FaInstagram, FaEnvelope, FaLinkedinIn, FaDownload } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
-import Alert from './Announcement';
 
 const Hero: React.FC = () => {
   return (
