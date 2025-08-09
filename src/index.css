@@ -20,7 +20,7 @@
 
 @layer base {
   body {
-    @apply bg-cream font-inclusive;
+    @apply bg-cream font-grotesk;
   }
 }
 
