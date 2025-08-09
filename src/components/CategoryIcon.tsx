@@ -24,3 +24,11 @@ export default function CategoryIcon({ category }: { category: Category }) {
             return null;
     }
 }
+
+export const CategoryBgColor: Record<string, string> = {
+    Services: "bg-green-50",
+    Gigs: "bg-pink-50",
+    "Notion Templates": "bg-yellow-50",
+    Products: "bg-blue-50",
+    "Resume Templates": "bg-orange-50"
+};

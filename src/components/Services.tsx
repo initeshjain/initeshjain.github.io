@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import type { Category, Item } from "../data/ServicesItems";
 import { items as allItems } from "../data/ServicesItems";
-import CategoryIcon from "../components/CategoryIcon";
+import CategoryIcon, { CategoryBgColor } from "../components/CategoryIcon";
 import ContactButton from "./ContactButton";
 
 const CATEGORIES: Category[] = [
@@ -73,7 +73,7 @@ export default function Services() {
                     {filtered.map(item => (
                         <li
                             key={item.id}
-                            className="group rounded-2xl border bg-white p-4 shadow-sm transition hover:shadow-lg hover:scale-[1.01]"
+                            className={`group rounded-2xl border ${CategoryBgColor[item.category]} p-4 shadow-sm transition hover:shadow-lg hover:scale-[1.01]`}
                         >
                             <div className="mb-3 flex items-center gap-3">
                                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border bg-gray-50 text-gray-900">

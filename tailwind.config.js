@@ -11,7 +11,7 @@ export default {
         warning: '#ffc107',
       },
       fontFamily: {
-        'inclusive': ['Inclusive Sans', 'sans-serif'],
+        'grotesk': ["Space Grotesk", "sans-serif"]
       },
     },
   },

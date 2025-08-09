@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 @tailwind utilities;
 
@@ -6,7 +6,7 @@
 @theme {
   --color-cream: #fefff3;
   --color-warning: #ffc107;
-  --font-inclusive: "Inclusive Sans", sans-serif;
+  --font-grotesk: "Space Grotesk", sans-serif;
 }
 
 .no-scrollbar::-webkit-scrollbar {
