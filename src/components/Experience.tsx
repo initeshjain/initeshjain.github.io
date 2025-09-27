@@ -3,7 +3,15 @@ import React from 'react';
 const Experience: React.FC = () => {
   const experiences = [
     {
-      period: "March 2023 - Present",
+      period: "Sept 2025 - Present",
+      title: "Software Engineer | Peerislands.io",
+      description: [
+        "Working as a Polyglot developer from Software engineering to AI on Product development.",
+        "Golang, ReactJs, Python, GenAI, MongoDb, SQL Server"
+      ]
+    },
+    {
+      period: "March 2023 - Sept 2025",
       title: "Software Engineer | Tata Consulting Services - (The Kroger Co.)",
       description: [
         "Working on Curation of Item data (Spring boot, Java, Neo4J, Kafka).",
