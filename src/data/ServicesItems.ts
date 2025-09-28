@@ -66,9 +66,9 @@ export const items: Item[] = [
         title: "ATS-friendly Resume Template",
         description: "Clean, modern, recruiter-tested template with examples.",
         category: "Resume Templates",
-        tags: ["Career"],
-        price: "Coming Soon",
-        link: "#"
+        tags: ["Career", "Dream Job"],
+        price: "Get Now",
+        link: "https://rzp.io/rzp/OJfHmp3r"
     },
     {
         id: "690-ai-prompts-for-success",

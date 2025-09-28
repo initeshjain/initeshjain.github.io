@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
             <a
-              href="https://drive.google.com/file/d/19ZpTWeLd93simqxuMuoQhGQK5q7hL6Bb/view"
+              href="https://drive.google.com/file/d/1bEdYpZ4SyC6_zdH4X6xJx4I_4qfAhT_j/view"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-yellow-400 text-black px-6 py-3 rounded-lg shadow-md hover:bg-yellow-500 transition"
