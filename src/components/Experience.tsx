@@ -6,7 +6,12 @@ const Experience: React.FC = () => {
       period: "Sept 2025 - Present",
       title: "Software Engineer | Peerislands.io",
       description: [
-        "Working as a Polyglot developer from Software engineering to AI on Product development.",
+        "Working on Aristera, a production revenue collection platform for a state agency(IFU business unit)",
+        "Extending Golang backend services, implementing new features in a regulated production environment",
+        "Owning end - to - end feature development across backend and frontend, from requirements to release",
+        "Building complex React + TypeScript UIs(campaigns, cohorts, dashboards, chatbot and React Flow–based workflows)",
+        "Developing GenAI - based outreach features for campaign recommendations(internal / early - stage)",
+        "Troubleshooting production and staging issues; frequently the go - to engineer for debugging and fixes",
         "Golang, ReactJs, Python, GenAI, MongoDb, SQL Server"
       ]
     },

@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             Nitesh K Jain
           </h1>
           <p className="text-gray-500 mb-10 text-lg">
-            Software Engineer • Filmmaker • Problem Solver
+            Software Engineer (Backend & Full Stack)
           </p>
 
           {/* Buttons */}
@@ -84,11 +84,9 @@ const Hero: React.FC = () => {
 
           {/* About */}
           <p className="text-gray-600 leading-relaxed text-lg">
-            I’m a software engineer with 4+ years of experience building
-            scalable systems, automating infrastructure, and creating tools that
-            save time and money. At TCS, I enhanced Kroger’s microservices-based
-            item curation system, led feature upgrades, and built monitoring
-            solutions that improved operational visibility for 17+ applications.
+            <p>I’m a Software Engineer with 5 years of experience building and operating production backend and full-stack systems. I work primarily with Golang, Java (Spring Boot), and React, and have built high-throughput microservices, complex user-facing workflows, and reliable CI/CD pipelines in enterprise and regulated environments.</p>
+
+            <p>I enjoy owning features end to end, from design discussions and implementation to debugging and production support. I care deeply about system reliability, maintainability, and performance. Recently, I’ve been working on GenAI-based features to improve real-world workflows, focusing on practical usefulness rather than hype.</p>
           </p>
         </div>
       </div>
