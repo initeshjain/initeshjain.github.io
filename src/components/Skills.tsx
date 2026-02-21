@@ -104,6 +104,9 @@ const Skills: React.FC = () => {
     "OpenAI / GPT": <SiOpenai />,
     "Hugging Face": <SiHuggingface />,
     "LangChain": <SiLangchain />,
+    "LangGraph": <SiLangchain />,
+    "LangFuse": <SiLangchain />,
+    "Voice Agents": <SiOpenai />,
     MCP: <TbProtocol />,
     NodeJs: <IoLogoNodejs />
   };
@@ -130,7 +133,7 @@ const Skills: React.FC = () => {
     },
     {
       title: "🤖 AI / LLM / MCP Tools",
-      skills: ["OpenAI / GPT", "Hugging Face", "LangChain", "MCP"]
+      skills: ["OpenAI / GPT", "LangChain", "LangGraph", "LangFuse", "Voice Agents", "Cursor", "Claude Code", "Hugging Face", "MCP"]
     },
     {
       title: "🎨 Other Tools",

@@ -89,6 +89,69 @@ export const items: Item[] = [
         link: "https://rzp.io/l/100-ways-to-try-chatgpt-today"
     },
     {
+        id: "ai-agent-development",
+        title: "Custom AI Agent Development (LangChain/LangGraph)",
+        description: "Build intelligent AI agents using LangChain and LangGraph for task automation, decision-making, and multi-step workflows tailored to your business.",
+        category: "Services",
+        tags: ["AI", "LangChain", "LangGraph", "Agents", "GenAI"],
+        price: "Custom",
+        link: "mailto:nitesh.exe@gmail.com?subject=AI%20Agent%20Development%20Request&body=Hi%20Nitesh%2C%0A%0AI%20am%20interested%20in%20building%20a%20custom%20AI%20agent%20for%20my%20business.%20Could%20you%20share%20details%20about%20your%20approach%2C%20tech%20stack%2C%20and%20pricing%3F%0A%0AThanks%2C%0A%5BYour%20Name%5D"
+    },
+    {
+        id: "voice-agent-development",
+        title: "AI Voice Agent (GPT-4 Realtime / WebSockets)",
+        description: "Build production-ready voice agents using OpenAI GPT-4 Realtime API with WebSockets for customer outreach, support, or data collection.",
+        category: "Services",
+        tags: ["AI", "Voice Agent", "OpenAI", "WebSockets", "Realtime"],
+        price: "Custom",
+        link: "mailto:nitesh.exe@gmail.com?subject=Voice%20Agent%20Development%20Request&body=Hi%20Nitesh%2C%0A%0AI%20am%20interested%20in%20building%20a%20voice%20agent%20for%20my%20business.%20Please%20share%20details%20on%20capabilities%20and%20pricing.%0A%0AThanks%2C%0A%5BYour%20Name%5D"
+    },
+    {
+        id: "custom-chatbot",
+        title: "Custom AI Chatbot (RAG + LLM)",
+        description: "Build a chatbot that answers questions from your documents, databases, or knowledge base using RAG, vector search, and LLMs.",
+        category: "Gigs",
+        tags: ["AI", "Chatbot", "RAG", "LLM", "Vector DB"],
+        price: "Custom",
+        link: "mailto:nitesh.exe@gmail.com?subject=Custom%20Chatbot%20Request&body=Hi%20Nitesh%2C%0A%0AI%20need%20a%20custom%20AI%20chatbot%20built%20on%20my%20data.%20Please%20share%20details%20on%20how%20we%20can%20get%20started.%0A%0AThanks%2C%0A%5BYour%20Name%5D"
+    },
+    {
+        id: "llm-integration",
+        title: "LLM API Integration & Prompt Engineering",
+        description: "Integrate OpenAI GPT-4/5, Claude, or open-source LLMs into your app with optimized prompts, caching, and LangFuse observability.",
+        category: "Services",
+        tags: ["LLM", "OpenAI", "Prompt Engineering", "LangFuse", "API"],
+        price: "Custom",
+        link: "mailto:nitesh.exe@gmail.com?subject=LLM%20Integration%20Request&body=Hi%20Nitesh%2C%0A%0AI%20want%20to%20integrate%20LLMs%20into%20my%20application.%20Could%20you%20help%20with%20API%20integration%20and%20prompt%20optimization%3F%0A%0AThanks%2C%0A%5BYour%20Name%5D"
+    },
+    {
+        id: "ai-workflow-automation",
+        title: "AI Workflow Automation",
+        description: "Automate repetitive business workflows using AI agents, from data extraction and summarization to email drafting and report generation.",
+        category: "Services",
+        tags: ["AI", "Automation", "Agents", "Productivity"],
+        price: "Custom",
+        link: "mailto:nitesh.exe@gmail.com?subject=AI%20Workflow%20Automation%20Request&body=Hi%20Nitesh%2C%0A%0AI%20want%20to%20automate%20some%20business%20workflows%20using%20AI.%20Please%20let%20me%20know%20how%20we%20can%20discuss%20this.%0A%0AThanks%2C%0A%5BYour%20Name%5D"
+    },
+    {
+        id: "mcp-server-development",
+        title: "MCP Server Development (Cursor / Claude)",
+        description: "Build custom MCP servers to connect AI assistants like Cursor and Claude Code to your internal tools, APIs, and databases.",
+        category: "Gigs",
+        tags: ["MCP", "Cursor", "Claude", "AI", "Tooling"],
+        price: "Custom",
+        link: "mailto:nitesh.exe@gmail.com?subject=MCP%20Server%20Development%20Request&body=Hi%20Nitesh%2C%0A%0AI%20want%20a%20custom%20MCP%20server%20built%20to%20connect%20my%20tools%20to%20AI%20assistants.%20Please%20share%20details.%0A%0AThanks%2C%0A%5BYour%20Name%5D"
+    },
+    {
+        id: "golang-microservice",
+        title: "Golang Microservice Development",
+        description: "Design and build high-performance microservices in Go with REST/gRPC APIs, database integration, and containerized deployment.",
+        category: "Services",
+        tags: ["Golang", "Microservices", "Backend", "API", "Docker"],
+        price: "Custom",
+        link: "mailto:nitesh.exe@gmail.com?subject=Golang%20Microservice%20Request&body=Hi%20Nitesh%2C%0A%0AI%20need%20a%20microservice%20built%20in%20Golang.%20Could%20you%20share%20your%20approach%20and%20pricing%3F%0A%0AThanks%2C%0A%5BYour%20Name%5D"
+    },
+    {
         id: "bug-fix-service",
         title: "Bug Fixing in Web Applications",
         description: "Fix critical bugs, runtime errors, or UI glitches in your React, Node.js, or Express apps.",

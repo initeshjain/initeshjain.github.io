@@ -4,49 +4,38 @@ const Experience: React.FC = () => {
   const experiences = [
     {
       period: "Sept 2025 - Present",
-      title: "Software Engineer | Peerislands.io",
+      title: "Software Engineer (Full Stack + AI) | PeerIslands.io",
       description: [
-        "Working on Aristera, a production revenue collection platform for a state agency(IFU business unit)",
-        "Extending Golang backend services, implementing new features in a regulated production environment",
-        "Owning end - to - end feature development across backend and frontend, from requirements to release",
-        "Building complex React + TypeScript UIs(campaigns, cohorts, dashboards, chatbot and React Flow–based workflows)",
-        "Developing GenAI - based outreach features for campaign recommendations(internal / early - stage)",
-        "Troubleshooting production and staging issues; frequently the go - to engineer for debugging and fixes",
-        "Golang, ReactJs, Python, GenAI, MongoDb, SQL Server"
+        "Building and extending a healthcare revenue collection platform using Golang, Python, ReactJS, MongoDB, and SQL Server, focused on AI-driven revenue optimization.",
+        "Developed AI outreach agents using LangChain and LangGraph to generate optimal patient and insurance outreach strategies across IFU, EBO, and BD business units, automating compliance-aware recommendations.",
+        "Architected two voice agents using OpenAI GPT-4 Realtime API with WebSockets — a patient outreach agent for dues discovery and a pharmacy medication agent automating patient data intake into systems like Outcomes.",
+        "Building complex React + TypeScript UIs (campaigns, cohorts, dashboards, chatbot, and React Flow–based workflows).",
+        "Integrated LangFuse for LLM observability and tracing; leveraging GPT-4, GPT-4o-Mini, and GPT-5 models across production features.",
+        "Mentored interns on AI and full-stack development; actively contributing to PeerIslands' 25 AI POCs in 25 Days initiative.",
+        "Tech: Golang, Python, ReactJS, LangChain, LangGraph, LangFuse, OpenAI GPT-4/5, MongoDB, SQL Server, WebSockets"
       ]
     },
     {
       period: "March 2023 - Sept 2025",
-      title: "Software Engineer | Tata Consulting Services - (The Kroger Co.)",
+      title: "Software Engineer | Tata Consultancy Services (The Kroger Co.)",
       description: [
-        "Working on Curation of Item data (Spring boot, Java, Neo4J, Kafka).",
-        "Designed, developed, and maintained microservices architecture for Items Curation using Java and Spring Boot, facilitating efficient data processing and retrieval within the item flow ecosystem.",
-        "Engineered an automated utility for SSL certificate renewal, guaranteeing 100% on-time renewals for Kroger's critical Product Information Management (PIM) application, which prevented potential downtime and bolstered security.",
-        "Developed the Hawk Eye application using Golang and ReactJs to manage 17+ systems, streamlining item flow and driving substantial operational efficiency and cost savings.",
-        "Built a Competency Management system for TCS Kroger account using Golang, ReactJs, and PostgreSQL, improving employee skill tracking by 50% and significantly boosting team performance.",
-        "Actively participated in code reviews, providing constructive feedback and adhering to best practices to maintain code quality and consistency."
+        "Optimized enterprise microservices using Java, Spring Boot, and Kafka, improving query speed by 40% for 10M+ daily transactions.",
+        "Developed Hawk Eye (Golang + React.js), a monitoring system managing 17+ enterprise platforms, reducing operational inefficiencies by 30%.",
+        "Engineered automated SSL certificate renewal for Kroger's critical PIM application, ensuring zero downtime and 100% security compliance.",
+        "Built a Competency Management System using Golang, React, and PostgreSQL, improving employee skill tracking efficiency by 50%.",
+        "Built rule-based data quality engines using Node.js for retail client data pipelines.",
+        "Conducted code reviews, enforcing best practices and improving maintainability across teams."
       ]
     },
     {
       period: "Jan 2021 - July 2023",
-      title: "DevOps Engineer and Tech Lead | Tata Consulting Services - (The Kroger Co.)",
+      title: "DevOps Tech Lead | Tata Consultancy Services (The Kroger Co.)",
       description: [
-        "Built deployment pipelines with GitHub Actions and JFrog Artifactory, increasing deployment speed by 30%.",
-        "Implemented RESTful APIs to enable seamless interaction between various components, ensuring smooth data exchange and interoperability.",
-        "Leveraged Go Lang to optimize performance-critical modules, enhancing the scalability and responsiveness of the application.",
-        "Developed modular monitoring tools using PowerShell, Python, REST APIs, and SQL, that automate alerts on threshold breaches, saving 60+ hours of manual work and reducing costs by $5,000.",
-        "Built an images processing tracking system with automated alerts (Email, ServiceNow, Teams), saving $10,000 per quarter and speeding up time to market.",
-        "Led a team of 14, increasing productivity by 20% and cutting critical issue response time by 15%.",
-        "Led a POC for migrating TIBCO preprocessor systems from RHEL 6 to RHEL 8.",
-        "Collaborated closely with cross-functional teams to analyse requirements, architect solutions, and deliver high-quality software products within strict timelines."
-      ]
-    },
-    {
-      period: "Sept-Oct 2020",
-      title: "Data Analyst Intern - Forsk Technologies Pvt. Ltd., Jaipur",
-      description: [
-        "Worked as Data Science Intern and completed Analytic Project titled Terrorism Analysis using Python.",
-        "Learned Pandas, Numpy, Dash Plotly."
+        "Built fully automated CI/CD pipelines with GitHub Actions and JFrog Artifactory, reducing deployment failures by 80%.",
+        "Led a 14-member DevOps team, increasing productivity by 40% and cutting critical incident response time by 35%.",
+        "Engineered automated image tracking and alert system (Email, ServiceNow, Teams), saving $10K per quarter.",
+        "Developed modular monitoring tools using PowerShell, Python, REST APIs, and SQL, saving 60+ hours/month of manual effort.",
+        "Collaborated with cross-functional teams to architect and deploy scalable cloud-native solutions on AWS and Azure."
       ]
     }
   ];

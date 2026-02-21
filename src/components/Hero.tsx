@@ -25,13 +25,13 @@ const Hero: React.FC = () => {
             Nitesh K Jain
           </h1>
           <p className="text-gray-500 mb-10 text-lg">
-            Software Engineer (Backend & Full Stack)
+            Software Engineer (Backend, AI & Full Stack)
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
             <a
-              href="https://drive.google.com/file/d/1b_5AukWdSUJGpIqDu-botiI0NMwkWwh5/view"
+              href="https://drive.google.com/file/d/1k92Xjq_AP23CQ3Uc-CGF4uJWajeTFg8I/view"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-yellow-400 text-black px-6 py-3 rounded-lg shadow-md hover:bg-yellow-500 transition"
@@ -83,11 +83,11 @@ const Hero: React.FC = () => {
           </div>
 
           {/* About */}
-          <p className="text-gray-600 leading-relaxed text-lg">
-            <p>I’m a Software Engineer with 5 years of experience building and operating production backend and full-stack systems. I work primarily with Golang, Java (Spring Boot), and React, and have built high-throughput microservices, complex user-facing workflows, and reliable CI/CD pipelines in enterprise and regulated environments.</p>
+          <div className="text-gray-600 leading-relaxed text-lg space-y-4">
+            <p>I'm an AI-focused Software Engineer with 5+ years of experience building production-grade backend systems and AI-powered applications. I work with Golang, Python, LangChain, LangGraph, and React, building everything from high-throughput microservices and voice agents to RAG pipelines and GenAI workflows in healthcare and enterprise domains.</p>
 
-            <p>I enjoy owning features end to end, from design discussions and implementation to debugging and production support. I care deeply about system reliability, maintainability, and performance. Recently, I’ve been working on GenAI-based features to improve real-world workflows, focusing on practical usefulness rather than hype.</p>
-          </p>
+            <p>Currently, I'm building AI outreach agents and voice agents using OpenAI's GPT-4 Realtime API at PeerIslands, driving revenue optimization for healthcare platforms. I enjoy owning features end to end and care deeply about system reliability, performance, and shipping AI that solves real problems.</p>
+          </div>
         </div>
       </div>
     </section>
