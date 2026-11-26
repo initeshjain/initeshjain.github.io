@@ -1,211 +1,142 @@
-import React from "react";
-import {
-  FaCode,
-  FaBlog,
-  FaBomb,
-  FaFolderOpen,
-  FaServer,
-  FaFilePdf,
-  FaWallet,
-  FaBrain,
-} from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
+import React, { useState } from "react";
+import type { Project } from "../data/portfolioData";
+import { projectsData } from "../data/portfolioData";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+
+type CategoryFilter = "All" | "AI & Agents" | "Systems & Cloud" | "Mobile & Apps" | "Open Tools";
+
+const categories: CategoryFilter[] = [
+  "All",
+  "AI & Agents",
+  "Systems & Cloud",
+  "Mobile & Apps",
+  "Open Tools"
+];
 
 const Projects: React.FC = () => {
-  const projects = [
-    {
-      title: "Super Memory (AI-Driven Memory Chatbot)",
-      icon: <FaBrain className="inline-block mr-2 text-indigo-500" />,
-      description:
-        "An AI-powered app where users save memories and converse with them via RAG architecture using embeddings, LangChain, Qdrant, and Next.js.",
-      techStack: ["Next.js", "LangChain", "Qdrant", "OpenAI API", "TailwindCSS"],
-      links: [
-        {
-          text: "Source Code",
-          url: "https://github.com/initeshjain/super-memory",
-          type: "secondary",
-        },
-      ],
-    },
-    {
-      title: "Advanced Expense Tracker",
-      icon: <FaWallet className="inline-block mr-2 text-green-500" />,
-      description:
-        "Collaborative expense and lend/borrow tracker built with Next.js, Prisma, and React — great for personal finance management.",
-      techStack: ["Next.js", "Prisma", "TailwindCSS", "PostgreSQL"],
-      links: [
-        {
-          text: "Source Code",
-          url: "https://github.com/initeshjain/advance-expense-tracker",
-          type: "secondary",
-        },
-      ],
-    },
-    {
-      title: "ChatPDF-RAG Tool",
-      icon: <FaFilePdf className="inline-block mr-2 text-red-500" />,
-      description:
-        "A RAG solution for querying PDF documents conversationally. Built with modern frontend/backend stack and deployable via Docker compose.",
-      techStack: ["Next.js", "LangChain", "Pinecone", "Docker", "TailwindCSS"],
-      links: [
-        {
-          text: "Source Code",
-          url: "https://github.com/initeshjain/ChatPDF-RAG",
-          type: "secondary",
-        },
-      ],
-    },
-    {
-      title: "Quick React Pagination - NPM Package",
-      icon: <FaCode className="inline-block mr-2 text-yellow-500" />,
-      description:
-        "A simple, reusable pagination component for React applications. Helps users navigate through pages of content easily.",
-      techStack: ["React", "TypeScript", "NPM"],
-      links: [
-        {
-          text: "NPM.Org",
-          url: "https://www.npmjs.com/package/quick-react-pagination",
-          type: "primary",
-        },
-        {
-          text: "Source Code",
-          url: "https://github.com/initeshjain/quick-react-pagination",
-          type: "secondary",
-        },
-      ],
-    },
-    {
-      title: "Mango – MongoDB Explorer",
-      icon: <SiMongodb className="inline-block mr-2 text-emerald-500" />,
-      description:
-        "A sleek, responsive MongoDB explorer built with Next.js. Lets you view, query, and manage your databases from mobile, tablet, or desktop — anywhere, anytime.",
-      techStack: ["Next.js", "MongoDB", "TailwindCSS"],
-      links: [
-        {
-          text: "Source Code",
-          url: "https://github.com/initeshjain/mango",
-          type: "secondary",
-        },
-      ],
-    },
-    {
-      title: "Code Sharer - CodeSher",
-      icon: <FaCode className="inline-block mr-2 text-blue-500" />,
-      description:
-        "Next.js 13, Tailwind, and TypeScript app to share code snippets with expiry dates, language formatting, and shortened URLs — all without a database.",
-      techStack: ["Next.js", "TailwindCSS", "TypeScript"],
-      links: [{ text: "Live Preview", url: "https://code.noobgeek.in", type: "primary" }],
-    },
-    {
-      title: "Blog App - noobgeek.in",
-      icon: <FaBlog className="inline-block mr-2 text-green-500" />,
-      description:
-        "Next.js 12, MongoDB, and Google SSO-based platform for blogs, Q&A, and user engagement.",
-      techStack: ["Next.js", "MongoDB", "TailwindCSS", "Google SSO"],
-      links: [{ text: "Live Preview", url: "https://www.noobgeek.in", type: "primary" }],
-    },
-    {
-      title: "Terrorism Analysis With Insights",
-      icon: <FaBomb className="inline-block mr-2 text-red-500" />,
-      description:
-        "A real client dashboard with maps and charts to analyze terrorism events by region, country, and city. Built during internship at Forsk Technologies.",
-      techStack: ["Python", "Flask", "Plotly", "Pandas"],
-      links: [
-        {
-          text: "Live Preview",
-          url: "https://terrorism-analysis.onrender.com",
-          type: "primary",
-        },
-        {
-          text: "Source Code",
-          url: "https://github.com/initeshjain/Terrosism-Analysis",
-          type: "secondary",
-        },
-      ],
-    },
-    {
-      title: "Golang FTP-like Server",
-      icon: <FaServer className="inline-block mr-2 text-blue-500" />,
-      description:
-        "An FTP-style backend service built with Go and SQLite—demonstrates systems programming and backend design.",
-      techStack: ["Go", "SQLite"],
-      links: [
-        {
-          text: "Source Code",
-          url: "https://github.com/initeshjain/golang-ftp-server",
-          type: "secondary",
-        },
-      ],
-    },
-    {
-      title: "File Cluster Cleaner (Python)",
-      icon: <FaFolderOpen className="inline-block mr-2 text-green-500" />,
-      description:
-        "Python script to automatically organize files by extension—makes desktop cleanup effortless.",
-      techStack: ["Python"],
-      links: [
-        {
-          text: "Source Code",
-          url: "https://github.com/initeshjain/File-Cluster-Cleaner-Script",
-          type: "secondary",
-        },
-      ],
-    },
-  ];
+  const [activeTab, setActiveTab] = useState<CategoryFilter>("All");
+
+  const filtered = activeTab === "All"
+    ? projectsData
+    : projectsData.filter(p => p.category === activeTab);
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-normal mb-8 ml-4 flex items-center gap-2">
-          <span className="text-yellow-500 mr-3">📂</span> Projects
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200 flex flex-col"
-            >
-              <div className="p-6 flex-grow">
-                <h2 className="text-lg font-semibold mb-2 flex items-center">
-                  {project.icon}
-                  {project.title}
-                </h2>
-                <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                  {project.description}
-                </p>
+    <section id="the-bench" className="py-12 sm:py-16 border-b border-[#E2DFD2] bg-[#F6F4EE]">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        {/* Section Header with Touch-Friendly Filter Tabs */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
+          <div>
+            <div className="inline-flex items-center gap-2 font-mono text-xs font-bold text-[#1E40AF] uppercase tracking-wider mb-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1E40AF]" />
+              FEATURED WORK // READY TO TEST
+            </div>
+            <h2 className="font-display text-2xl sm:text-4xl font-extrabold tracking-tight text-[#12131C]">
+              Featured Projects &amp; Tools
+            </h2>
+            <p className="text-[#475569] text-sm sm:text-base mt-1 max-w-xl">
+              Real apps you can download, test, or inspect the source code of. Built with privacy, speed, and real utility in mind.
+            </p>
+          </div>
 
-                {/* Tech Stack Chips */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.techStack.map((tech, i) => (
+          {/* Filter Pills with Horizontal Scroll on Mobile */}
+          <div className="flex items-center gap-1.5 rounded-lg border border-[#CBD5E1] bg-white p-1.5 shadow-xs overflow-x-auto scrollbar-none max-w-full">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveTab(cat)}
+                className={`whitespace-nowrap rounded-md px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-wider transition-all duration-150 ${
+                  activeTab === cat
+                    ? "bg-[#12131C] text-white shadow-xs"
+                    : "text-[#575969] hover:text-[#12131C] hover:bg-black/5"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Project Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {filtered.map((project: Project) => (
+            <div
+              key={project.id}
+              className="group relative flex flex-col justify-between rounded-xl border border-[#CBD5E1] bg-white p-5 sm:p-6 shadow-xs transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-[#94A3B8]"
+            >
+              <div>
+                {/* Badges */}
+                <div className="flex flex-wrap items-center gap-1.5 mb-3.5">
+                  {project.badges.map((badge, bIdx) => (
                     <span
-                      key={i}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border border-gray-300"
+                      key={bIdx}
+                      className="rounded px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider bg-[#F1F5F9] text-[#334155] border border-[#E2E8F0]"
                     >
-                      {tech}
+                      {badge}
                     </span>
                   ))}
                 </div>
+
+                {/* Title & Tagline */}
+                <h3 className="font-display text-lg sm:text-xl font-bold text-[#12131C] group-hover:text-[#1E40AF] transition-colors">
+                  {project.title}
+                </h3>
+                <p className="font-mono text-xs font-medium text-[#64748B] mb-2.5">
+                  {project.tagline}
+                </p>
+
+                {/* Description in Clear, Simple English */}
+                <p className="text-sm text-[#475569] leading-relaxed mb-6">
+                  {project.description}
+                </p>
               </div>
 
-              {/* Links */}
-              <div className="p-6 pt-0 space-x-2">
-                {project.links.map((link, linkIndex) => (
+              {/* Action Links */}
+              <div className="pt-4 border-t border-[#F1F5F9] flex flex-wrap items-center gap-3">
+                {project.links.map((link, lIdx) => (
                   <a
-                    key={linkIndex}
+                    key={lIdx}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-block px-4 py-2 rounded text-sm font-medium transition ${link.type === "primary"
-                        ? "bg-yellow-400 text-black hover:bg-yellow-500"
-                        : "border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white"
-                      }`}
+                    className={`inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors ${
+                      link.primary
+                        ? "text-[#1E40AF] hover:text-[#1D4ED8] underline underline-offset-4 decoration-2"
+                        : "text-[#64748B] hover:text-[#12131C]"
+                    }`}
                   >
-                    {link.text}
+                    {link.label.includes("GitHub") ? <FaGithub size={12} /> : null}
+                    {link.label}
                   </a>
                 ))}
               </div>
             </div>
           ))}
+
+          {/* Outro Card */}
+          <div className="relative flex flex-col justify-between rounded-xl bg-[#12131C] p-6 text-white shadow-md transition-all duration-200 hover:-translate-y-1">
+            <div className="space-y-3">
+              <span className="inline-block rounded px-2.5 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider bg-white/10 text-white border border-white/20">
+                114 PUBLIC REPOSITORIES
+              </span>
+              <h3 className="font-display text-xl font-bold tracking-tight text-white">
+                All Open Source Work
+              </h3>
+              <p className="text-sm text-[#CBD5E1] leading-relaxed">
+                Looking for code samples, algorithms, or utility scripts? You can browse all 114 open-source repositories directly on my GitHub.
+              </p>
+            </div>
+
+            <div className="pt-6">
+              <a
+                href="https://github.com/initeshjain?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-[#FEF08A] hover:underline"
+              >
+                Browse on GitHub ↗ <FaExternalLinkAlt size={10} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

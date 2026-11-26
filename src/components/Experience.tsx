@@ -1,71 +1,89 @@
-import React from 'react';
+import React from "react";
+import type { Experience as ExpType } from "../data/portfolioData";
+import { experiencesData } from "../data/portfolioData";
+import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Experience: React.FC = () => {
-  const experiences = [
-    {
-      period: "Sept 2025 - Present",
-      title: "Software Engineer (Full Stack + AI) | PeerIslands.io",
-      description: [
-        "Building and extending a healthcare revenue collection platform using Golang, Python, ReactJS, MongoDB, and SQL Server, focused on AI-driven revenue optimization.",
-        "Developed AI outreach agents using LangChain and LangGraph to generate optimal patient and insurance outreach strategies across IFU, EBO, and BD business units, automating compliance-aware recommendations.",
-        "Architected two voice agents using OpenAI GPT-4 Realtime API with WebSockets — a patient outreach agent for dues discovery and a pharmacy medication agent automating patient data intake into systems like Outcomes.",
-        "Building complex React + TypeScript UIs (campaigns, cohorts, dashboards, chatbot, and React Flow–based workflows).",
-        "Integrated LangFuse for LLM observability and tracing; leveraging GPT-4, GPT-4o-Mini, and GPT-5 models across production features.",
-        "Mentored interns on AI and full-stack development; actively contributing to PeerIslands' 25 AI POCs in 25 Days initiative.",
-        "Tech: Golang, Python, ReactJS, LangChain, LangGraph, LangFuse, OpenAI GPT-4/5, MongoDB, SQL Server, WebSockets"
-      ]
-    },
-    {
-      period: "March 2023 - Sept 2025",
-      title: "Software Engineer | Tata Consultancy Services (The Kroger Co.)",
-      description: [
-        "Optimized enterprise microservices using Java, Spring Boot, and Kafka, improving query speed by 40% for 10M+ daily transactions.",
-        "Developed Hawk Eye (Golang + React.js), a monitoring system managing 17+ enterprise platforms, reducing operational inefficiencies by 30%.",
-        "Engineered automated SSL certificate renewal for Kroger's critical PIM application, ensuring zero downtime and 100% security compliance.",
-        "Built a Competency Management System using Golang, React, and PostgreSQL, improving employee skill tracking efficiency by 50%.",
-        "Built rule-based data quality engines using Node.js for retail client data pipelines.",
-        "Conducted code reviews, enforcing best practices and improving maintainability across teams."
-      ]
-    },
-    {
-      period: "Jan 2021 - July 2023",
-      title: "DevOps Tech Lead | Tata Consultancy Services (The Kroger Co.)",
-      description: [
-        "Built fully automated CI/CD pipelines with GitHub Actions and JFrog Artifactory, reducing deployment failures by 80%.",
-        "Led a 14-member DevOps team, increasing productivity by 40% and cutting critical incident response time by 35%.",
-        "Engineered automated image tracking and alert system (Email, ServiceNow, Teams), saving $10K per quarter.",
-        "Developed modular monitoring tools using PowerShell, Python, REST APIs, and SQL, saving 60+ hours/month of manual effort.",
-        "Collaborated with cross-functional teams to architect and deploy scalable cloud-native solutions on AWS and Azure."
-      ]
-    }
-  ];
-
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-normal mb-8 ml-4">
-          <i className="fas fa-draw-polygon mr-3"></i>
-          Experience
-        </h1>
-        <div className="resume-box p-8 mx-4">
-          <ul className="space-y-0">
-            {experiences.map((exp, index) => (
-              <li key={index} className="timeline-item">
-                <div className="timeline-icon">
-                  <i className="fas fa-briefcase"></i>
+    <section className="py-16 border-b border-[#E2DFD2] bg-[#F6F4EE]">
+      <div className="mx-auto max-w-6xl px-4">
+        {/* Section Header */}
+        <div className="mb-10">
+          <div className="inline-flex items-center gap-2 font-mono text-xs font-bold text-[#1E40AF] uppercase tracking-wider mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1E40AF]" />
+            CAREER TIMELINE // PRODUCTION IMPACT
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-[#12131C]">
+            Experience &amp; Operational Record
+          </h2>
+          <p className="text-[#575969] text-sm mt-1 max-w-xl">
+            5+ years building and scaling enterprise platforms, autonomous agent pipelines, and high-throughput systems.
+          </p>
+        </div>
+
+        {/* Experience Cards */}
+        <div className="space-y-6">
+          {experiencesData.map((exp: ExpType, idx) => (
+            <div
+              key={idx}
+              className="relative rounded-xl border border-[#CBD5E1] bg-white p-6 sm:p-8 shadow-xs transition-all duration-200 hover:shadow-md hover:border-[#94A3B8]"
+            >
+              {/* Top Banner Row */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#F1F5F9] pb-4 mb-5">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-display text-xl font-bold text-[#12131C]">
+                      {exp.role}
+                    </h3>
+                    {exp.badge && (
+                      <span className="rounded px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider bg-[#DCFCE7] text-[#166534] border border-[#BBF7D0]">
+                        {exp.badge}
+                      </span>
+                    )}
+                  </div>
+                  <div className="font-mono text-sm font-semibold text-[#1E40AF] mt-0.5">
+                    {exp.company}
+                  </div>
                 </div>
-                <span className="bg-warning text-white text-xs px-3 py-1 rounded-full font-semibold inline-block mb-3">
-                  {exp.period}
+
+                <div className="flex flex-wrap items-center gap-3 font-mono text-xs text-[#64748B]">
+                  <span className="inline-flex items-center gap-1.5">
+                    <FaCalendarAlt size={11} className="text-[#94A3B8]" />
+                    {exp.period}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <FaMapMarkerAlt size={11} className="text-[#94A3B8]" />
+                    {exp.location}
+                  </span>
+                </div>
+              </div>
+
+              {/* Bullet Points */}
+              <ul className="space-y-2.5 mb-6">
+                {exp.bullets.map((bullet, bIdx) => (
+                  <li key={bIdx} className="flex items-start gap-2.5 text-sm text-[#475569] leading-relaxed">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#1E40AF] shrink-0" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Tech Stack Chips */}
+              <div className="flex flex-wrap items-center gap-1.5 pt-4 border-t border-[#F8FAFC]">
+                <span className="font-mono text-[10px] uppercase font-bold text-[#94A3B8] mr-1">
+                  TOOLS //
                 </span>
-                <h5 className="text-lg font-bold mb-3">{exp.title}</h5>
-                <div className="text-gray-700">
-                  {exp.description.map((desc, i) => (
-                    <p key={i} className="mb-2">- {desc}</p>
-                  ))}
-                </div>
-              </li>
-            ))}
-          </ul>
+                {exp.tech.map((t, tIdx) => (
+                  <span
+                    key={tIdx}
+                    className="rounded-md bg-[#F1F5F9] px-2.5 py-1 font-mono text-xs font-semibold text-[#334155] border border-[#E2E8F0]"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

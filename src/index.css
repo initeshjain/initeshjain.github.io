@@ -1,60 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400..700&family=Plus+Jakarta+Sans:wght@400..700&display=swap');
 @import "tailwindcss";
-@tailwind utilities;
 
-/* Declare custom design tokens */
 @theme {
-  --color-cream: #fefff3;
-  --color-warning: #ffc107;
-  --font-grotesk: "Space Grotesk", sans-serif;
+  --font-display: "Bricolage Grotesque", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  
+  --color-paper: #F6F4EE;
+  --color-paper-subtle: #ECE8DE;
+  --color-card-bg: #FFFFFF;
+  --color-ink-primary: #12131C;
+  --color-ink-muted: #575969;
+  --color-ink-faint: #8E90A0;
+  --color-cobalt: #1E40AF;
+  --color-coral: #E11D48;
+  --color-emerald-accent: #059669;
+  --color-amber-accent: #D97706;
 }
 
-.no-scrollbar::-webkit-scrollbar {
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink-primary);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Drafting workbench graph-paper grid */
+.bg-grid-drafting {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(203, 213, 225, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(203, 213, 225, 0.45) 1px, transparent 1px);
+}
+
+.bg-grid-major {
+  background-size: 120px 120px;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.35) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.35) 1.5px, transparent 1.5px);
+}
+
+/* Tactile paper sheet shadows */
+.sheet-shadow {
+  box-shadow: 0 4px 14px -2px rgba(18, 19, 28, 0.06), 0 2px 6px -1px rgba(18, 19, 28, 0.04);
+}
+
+/* Tape accent effect */
+.masking-tape {
+  position: relative;
+}
+.masking-tape::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 16px;
+  background-color: rgba(254, 240, 138, 0.85);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Continuous Marquee Animation */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Signal path pulse animation */
+@keyframes signalPulse {
+  0% { stroke-dashoffset: 60; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.active-signal-line {
+  stroke-dasharray: 8 16;
+  animation: signalPulse 2.4s linear infinite;
+}
+
+/* Floating animation for workbench props */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(1deg); }
+}
+
+.animate-float {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+.scrollbar-none::-webkit-scrollbar {
   display: none;
 }
-
-.no-scrollbar {
+.scrollbar-none {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-@layer base {
-  body {
-    @apply bg-cream font-grotesk;
-  }
-}
-
-@layer components {
-  .resume-box {
-    @apply bg-white shadow-lg rounded-lg;
-  }
-
-  .timeline-item {
-    @apply relative pl-16 pb-8;
-  }
-
-  .timeline-item::after {
-    content: "";
-    @apply absolute left-5 top-0 w-px h-full border-l border-dashed border-warning;
-  }
-
-  .timeline-item:last-child::after {
-    @apply hidden;
-  }
-
-  .timeline-icon {
-    @apply absolute left-0 w-10 h-10 bg-white border border-dashed border-warning rounded-full flex items-center justify-center text-warning z-10;
-  }
-
-  .progress-bar {
-    @apply bg-warning text-black font-bold text-sm flex items-center justify-center;
-  }
-
-  .social-icon {
-    @apply inline-flex items-center justify-center w-12 h-12 text-black border border-black rounded-full text-xl mr-6 hover:text-warning transition-colors;
-  }
-
-  .social-icon:last-child {
-    @apply mr-0;
-  }
 }

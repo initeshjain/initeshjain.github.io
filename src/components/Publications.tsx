@@ -1,58 +1,60 @@
 import React from "react";
+import { FaBook, FaAmazon } from "react-icons/fa";
 
 const Publications: React.FC = () => {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        {/* Heading */}
-        <h1 className="text-3xl font-semibold mb-10 flex items-center ml-4">
-          <i className="fas fa-book mr-3 text-warning"></i>
-          Publications
-        </h1>
+    <section className="py-16 border-b border-[#E2DFD2] bg-[#F6F4EE]">
+      <div className="mx-auto max-w-6xl px-4">
+        {/* Section Header */}
+        <div className="mb-10">
+          <div className="inline-flex items-center gap-2 font-mono text-xs font-bold text-[#1E40AF] uppercase tracking-wider mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1E40AF]" />
+            PUBLICATIONS // AUTHORED WORKS
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-[#12131C]">
+            Books &amp; Technical Writing
+          </h2>
+        </div>
 
-        {/* Card */}
-        <div className="mx-4 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <div className="flex flex-col md:flex-row">
-            {/* Image */}
-            <div className="md:w-1/3 flex justify-center items-center bg-gray-100 p-6">
+        {/* Book Sheet Card */}
+        <div className="rounded-xl border border-[#CBD5E1] bg-white p-6 sm:p-8 shadow-xs">
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            {/* Book Cover */}
+            <div className="w-full md:w-56 shrink-0 rounded-lg overflow-hidden border border-[#E2E8F0] shadow-sm bg-[#F8FAFC]">
               <img
-                className="max-w-full h-auto rounded-lg shadow-md"
                 src="/book.jpg"
-                alt="Server Operating System Book"
+                alt="Server Operating System Book Cover"
+                className="w-full h-auto object-cover"
               />
             </div>
 
-            {/* Content */}
-            <div className="md:w-2/3 p-6 flex flex-col justify-between">
-              <div>
-                <span className="bg-warning text-black text-xs px-3 py-1 rounded-full font-semibold inline-block mb-4">
-                  25 July 2020
+            {/* Description */}
+            <div className="space-y-4">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded px-2.5 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider bg-[#FEF3C7] text-[#92400E] border border-[#FDE68A]">
+                  AMAZON KINDLE EBOOK
                 </span>
-                <h2 className="text-2xl font-bold mb-4 leading-snug">
-                  Server Operating System - Practical Resolved Kindle Edition
-                </h2>
-                <p className="text-gray-700 leading-relaxed">
-                  The book primarily focuses on practical content with minimal
-                  theory. It serves as a collection of server operating system
-                  notes taught in academics, written in English with simple,
-                  layman-friendly terms for better understanding.
-                  <br />
-                  <br />
-                  As the author and a cloud computing student, I documented my
-                  academic learnings in this book. I believe you will find it
-                  helpful and insightful.
-                </p>
+                <span className="font-mono text-xs text-[#64748B]">
+                  Published: August 1, 2020
+                </span>
               </div>
 
-              {/* CTA Button */}
-              <div className="mt-6">
+              <h3 className="font-display text-2xl font-bold text-[#12131C]">
+                Server Operating System - Practical Resolved
+              </h3>
+
+              <p className="text-sm text-[#475569] leading-relaxed">
+                Practical, code-first breakdown of server operating systems designed to eliminate textbook fluff. Written in clear, accessible engineering language covering enterprise directory architectures, kernel processes, storage hierarchies, and real-world sysadmin operations.
+              </p>
+
+              <div className="pt-2">
                 <a
                   href="https://amzn.to/3v37FAm"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-warning text-black px-6 py-2 rounded-lg font-medium hover:bg-yellow-500 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-lg bg-[#12131C] px-5 py-2.5 font-mono text-xs uppercase font-bold tracking-wider text-white hover:bg-black transition-all shadow-xs"
                 >
-                  View on Amazon
+                  <FaAmazon size={13} /> View on Amazon ↗
                 </a>
               </div>
             </div>
