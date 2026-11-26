@@ -1,11 +1,11 @@
 import React from "react";
 import type { Experience as ExpType } from "../data/portfolioData";
 import { experiencesData } from "../data/portfolioData";
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Experience: React.FC = () => {
   return (
-    <section className="py-16 border-b border-[#E2DFD2] bg-[#F6F4EE]">
+    <section className="py-16 border-b border-[#E2DFD2] bg-transparent">
       <div className="mx-auto max-w-6xl px-4">
         {/* Section Header */}
         <div className="mb-10">

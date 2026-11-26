@@ -1,9 +1,9 @@
 import React from "react";
-import { FaBook, FaAmazon } from "react-icons/fa";
+import { FaAmazon } from "react-icons/fa";
 
 const Publications: React.FC = () => {
   return (
-    <section className="py-16 border-b border-[#E2DFD2] bg-[#F6F4EE]">
+    <section className="py-16 border-b border-[#E2DFD2] bg-transparent">
       <div className="mx-auto max-w-6xl px-4">
         {/* Section Header */}
         <div className="mb-10">

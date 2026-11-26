@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -13,7 +13,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#E2DFD2] bg-[#F6F4EE]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[#E2DFD2] bg-transparent/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         {/* Brand */}
         <NavLink to="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2.5 group">
@@ -106,7 +106,7 @@ export default function Header() {
               end
               onClick={() => setMobileMenuOpen(false)}
               className={({ isActive }) =>
-                `p-3 rounded-lg ${isActive ? "bg-[#12131C] text-white" : "text-[#575969] hover:bg-[#F6F4EE]"}`
+                `p-3 rounded-lg ${isActive ? "bg-[#12131C] text-white" : "text-[#575969] hover:bg-transparent"}`
               }
             >
               🛠️ Projects &amp; Overview
@@ -115,7 +115,7 @@ export default function Header() {
               to="/services"
               onClick={() => setMobileMenuOpen(false)}
               className={({ isActive }) =>
-                `p-3 rounded-lg ${isActive ? "bg-[#12131C] text-white" : "text-[#575969] hover:bg-[#F6F4EE]"}`
+                `p-3 rounded-lg ${isActive ? "bg-[#12131C] text-white" : "text-[#575969] hover:bg-transparent"}`
               }
             >
               📦 Products, Services &amp; Gigs
@@ -124,7 +124,7 @@ export default function Header() {
               to="/blogs"
               onClick={() => setMobileMenuOpen(false)}
               className={({ isActive }) =>
-                `p-3 rounded-lg ${isActive ? "bg-[#12131C] text-white" : "text-[#575969] hover:bg-[#F6F4EE]"}`
+                `p-3 rounded-lg ${isActive ? "bg-[#12131C] text-white" : "text-[#575969] hover:bg-transparent"}`
               }
             >
               ✍️ Articles &amp; Notes

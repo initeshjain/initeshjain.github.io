@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import type { Category, Item } from "../data/ServicesItems";
 import { items as allItems } from "../data/ServicesItems";
 import { FaExternalLinkAlt, FaTag } from "react-icons/fa";
@@ -28,7 +28,7 @@ export default function Services() {
   }, [active, q]);
 
   return (
-    <div className="min-h-screen bg-[#F6F4EE] py-12">
+    <div className="min-h-screen bg-transparent py-12">
       <div className="mx-auto max-w-6xl px-4">
         {/* Header */}
         <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E2DFD2] pb-8">

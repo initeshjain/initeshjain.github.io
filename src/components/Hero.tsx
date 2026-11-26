@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative pt-6 sm:pt-10 pb-12 sm:pb-16 bg-[#F6F4EE]/90">
+    <section className="relative pt-6 sm:pt-10 pb-12 sm:pb-16 bg-transparent/90">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         
         {/* Top Identification Pill with Active Status */}

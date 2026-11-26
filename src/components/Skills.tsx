@@ -2,8 +2,6 @@ import React from "react";
 import {
   SiPython,
   SiJavascript,
-  SiReact,
-  SiNextdotjs,
   SiMongodb,
   SiPostgresql,
   SiDocker,
@@ -13,19 +11,12 @@ import {
   SiOpenai,
   SiLangchain,
   SiRedis,
-  SiFastapi,
   SiKotlin
 } from "react-icons/si";
 import { FaJava, FaAws } from "react-icons/fa";
 import { VscAzure } from "react-icons/vsc";
 import { FaGolang } from "react-icons/fa6";
 import { IoLogoNodejs } from "react-icons/io5";
-
-interface SkillItem {
-  name: string;
-  category: string;
-  icon?: React.ReactNode;
-}
 
 const skillCategories = [
   {
@@ -76,7 +67,7 @@ const skillCategories = [
 
 const Skills: React.FC = () => {
   return (
-    <section className="py-16 border-b border-[#E2DFD2] bg-[#F6F4EE]">
+    <section className="py-16 border-b border-[#E2DFD2] bg-transparent">
       <div className="mx-auto max-w-6xl px-4">
         {/* Section Header */}
         <div className="mb-10">

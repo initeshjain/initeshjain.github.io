@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaPlay, FaRobot, FaMicrophone, FaFilePdf, FaServer, FaCheckCircle } from "react-icons/fa";
+import { FaRobot, FaMicrophone, FaFilePdf, FaServer } from "react-icons/fa";
 
 interface NodeItem {
   id: string;

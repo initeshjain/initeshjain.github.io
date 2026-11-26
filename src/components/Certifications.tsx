@@ -1,6 +1,5 @@
 import React from "react";
-import { FaCertificate, FaExternalLinkAlt } from "react-icons/fa";
-import { VscAzure } from "react-icons/vsc";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface Cert {
   title: string;
@@ -64,7 +63,7 @@ const verifiedCerts: Cert[] = [
 
 const Certifications: React.FC = () => {
   return (
-    <section className="py-16 bg-[#F6F4EE]">
+    <section className="py-16 bg-transparent">
       <div className="mx-auto max-w-6xl px-4">
         {/* Section Header */}
         <div className="mb-10">
